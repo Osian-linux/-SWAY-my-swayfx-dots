@@ -1,0 +1,5 @@
+# Wallpaper
+output * bg ~/Pictures/komaru.jpg fill
+
+# Auto Start
+exec_always waybar -c ~/Documents/waybar/mybar/config -s ~/Documents/waybar/mybar/style.css

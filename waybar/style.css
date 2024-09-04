@@ -1,0 +1,141 @@
+/* -- DEFINING COLORS -- */
+@define-color bg rgba(36, 39, 58, 0);
+@define-color bg1 rgba(54, 58, 79, 1);
+@define-color bg2 rgba(147, 154, 183, 0.4);
+
+@define-color fg #cad3f5;
+
+@define-color green #ffffff; 
+@define-color red #e67e80;
+
+
+/* -- STYLING -- */
+
+/* - Styling the whole bar - */
+* {
+  all: unset; /* resets gtk theming */
+
+  font-family: 'Outfit';
+  font-weight: 600;
+  font-size: 15px;
+}
+
+window#waybar {
+  background-color: @bg;
+  border-radius: 0px 0px 0px 0px;
+}
+
+/* - Styling app menu - */
+#custom-menu {
+  font-size: 19px;
+
+  margin: 0px 7px 0px 0px;
+  padding: 0px 20px 0px 12px;
+
+  color: @fg;
+  background-color: @bg1;
+
+  border-radius: 0px 20px 0px 0px;
+}
+#custom-menu:hover { background-color: @bg2; }
+
+#taskbar button {
+	margin: 0px 5px 0px 0px;
+	padding : 5px 15px 5px 15px;
+
+	color: @fg;
+	background-color: @bg1;
+	border-radius: 20px 20px 0px 0px;
+}
+#taskbar button:hover { background-color: @bg2; }
+/* - Styling media title module - */
+#mpris {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 15px;
+
+  color: @fg;
+  background-color: @bg1;
+  border-radius: 20px 20px 0px 0px;
+}
+#mpris:hover { background-color: @bg2; }
+
+/* - Styling workspaces module - */
+#workspaces button {
+  margin: 0px 3px 0px 3px;
+  padding: 3px 20px 0px 20px; /* Needed 17px to do the circle */
+  
+  color: @fg;
+  background-color: @bg1;
+  border-radius: 15px 15px 0px 0px;
+}
+
+#workspaces button.active {
+  color: @green;
+  background-color: @bg1;
+}
+/*#workspaces button.urgent { color: @red; }*/
+#workspaces button:hover { background-color: @bg2; }
+
+/* - Styling tray module - */
+#tray {
+  margin: 0px;
+  padding: 0px 15px;
+
+  color: @fg;
+  background-color: @bg1;
+
+  border-radius: 20px 0px 0px 0px;
+}
+#tray:hover { background-color: @bg2; }
+
+/* - Styling volume module - */
+#pulseaudio {
+  margin: 0px 0px 0px 0px;
+  padding: 2px 15px 0px 12px;
+
+  color: @fg;
+  background-color: @bg1;
+
+  border-radius: 0px 0px 0px 0px;
+}
+#pulseaudio:hover { background-color: @bg2; }
+
+/* - Styling language module - */
+#language {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 15px;
+
+  color: @fg;
+  background-color: @bg1;
+
+  border-radius: 0px 20px 0px 0px;
+}
+#language:hover { background-color: @bg2; }
+
+/* - Styling time module - */
+#clock {
+  margin: 5px 0px 5px 0px;
+  color: @fg;
+}
+
+#network {
+  margin: 5px 0px 5px 5px;
+  padding: 0px 5px 0px 0px;
+  color: @fg;
+}
+
+#battery {
+  margin: 5px;
+  color: @fg;
+}
+
+#cbnstack {
+  margin: 0px 0px 0px 9px;
+  padding: 0px 15px 0px 15px;
+
+  background-color: @bg1;
+
+  border-radius: 20px 0px 0px 0px;
+}
+#cbnstack:hover { background-color: @bg2; }
+#cbnstack > *:hover { background-color: @bg2; }

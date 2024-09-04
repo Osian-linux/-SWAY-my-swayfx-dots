@@ -1,0 +1,107 @@
+{
+  // -- Basic settings --
+  "layer": "top",
+  "position": "bottom",
+  "height": 45,
+
+  "reload_style_on_change": true,
+
+
+  // -- Modules position --
+  "modules-left": ["custom/menu", "wlr/taskbar", "mpris"],
+  "modules-right": ["sway/workspaces", "tray", "pulseaudio", "sway/language", "group/cbnstack"],
+
+
+  // -- Modules --
+
+  // - App menu module
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 17,
+    "icon-theme": "Adwaita",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-right": "close",
+  },
+
+  "mpris": {
+    "format": "⏸   {title}",
+    "format-paused": "▶   {title}",
+	  },
+
+  // - Tray module
+  "tray": { 
+    "spacing": 5
+  },
+
+  // - Workspaces module
+  "sway/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "default": "O"
+      },
+    "tooltip": false
+  },
+
+  // - language module
+  "sway/language": {
+    "format": "   {}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "tooltip": false,
+    "on-click": "hyprctl switchxkblayout juchen-usb-keyboard next"
+  },
+
+  // - Volume module
+  "pulseaudio": {
+    "scroll-step": 2,
+    "format": "{icon}{volume}%",
+    "format-icons": { "default": [" ", "  ", "    "] },
+    "tooltip": false,
+    "on-click": "pactl -- set-sink-volume 0 +2%",
+    "on-click-right": "pactl -- set-sink-volume 0 -2%"
+  },
+
+  // - Clock time module
+  "clock": {
+    "format": "{:%I:%M %p}"
+  },
+
+  // - Battery module
+  "battery": {
+    "format": "{icon}",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  // - Network module
+  "network": {
+    "format": "{icon}",
+    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"]
+  },
+
+  // - Clock, battery, network group
+  "group/cbnstack": {
+    "orientation": "horizontal",
+    "modules": [
+      "clock",
+      "network",
+      "battery",
+    ]
+  }
+}

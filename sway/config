@@ -1,0 +1,30 @@
+# Import Configs
+include {
+	bind
+	autostart
+	animations
+}
+
+# Keyboard Layout
+input * {
+	xkb_layout us,ru
+	xkb_options grp:alt_shift_toggle
+}
+
+# Window Options
+gaps inner 10
+gaps outer 5
+for_window [class="^.*$"] border none
+corner_radius 10
+
+# Effects
+layer_effects "waybar" blur enable;
+blur enable
+blur_xray on
+
+# Touchpad
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+}
